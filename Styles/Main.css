@@ -1,0 +1,143 @@
+body
+{
+	height:100%;
+	padding: 10px;
+	font-family: Arial;
+	/* [disabled]font-size: 1em; */
+	color: #666666;
+}
+.sectionHeader
+{
+    font-family: Arial;
+    font-size: .95em;
+    font-weight: bold;
+    color: #666666;
+    margin-bottom: 24px;
+}
+.sectionLabel
+{
+    font-family: Arial;
+    font-size: .75em;
+    color: #666666;
+    margin-bottom: 12px;
+}
+.stdLabel
+{
+    font-family: Arial;
+    font-size: .75em;
+    color: #666666;
+    margin-bottom: 2px;
+}
+.ddlLabel
+{
+    font-family: Arial;
+    font-size: .75em;
+    color: #666666;
+    border: 1px solid #CCCCCC;
+}
+.cblLabel
+{
+    font-family: Arial;
+    font-size: .75em;
+    color: #666666;
+}
+.cblLabel2
+{
+    font-family: Arial;
+    font-size: .75em;
+    color: #666666;
+	margin-bottom: 4px;
+}
+.cblLabelColumn1
+{
+	float: left;
+	width: 240px;	
+}
+.inpCopy
+{
+    font-family: Arial;
+    font-size: .75em;
+    color: #666666;
+    border: 1px solid #CCCCCC;
+    height: 16px;
+    padding-left: 3px;
+    padding-top: -1px;
+}
+.btnLabel
+{
+    font-family: Arial;
+    font-size: .75em;
+    color: #666666;
+    padding-top: 2px;
+}
+.dividerCollapsed
+{
+    background: url('../Images/availableItemsCollapsed.png') no-repeat left top;
+    width: 23px;
+    height: 281px; 
+}
+.dividerExpanded
+{
+    background: url('../Images/availableItemsExpanded.png') no-repeat left top;
+    width: 23px;
+    height: 281px; 
+}
+.collpaseExpandIcon
+{
+    cursor: pointer;
+    margin-left: -10px;
+    margin-bottom: 10px;
+} 
+.metricBuilderButton
+{
+    background: url('../Images/iconMetricBuilder.png') 0 0px;
+    width: 31px;
+    height: 31px;
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: -4px;
+}
+.metricBuilderButton:hover
+{
+    background: url('../Images/iconMetricBuilder.png') 0 -31px;
+    width: 31px;
+    height: 31px;
+    overflow: hidden;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: -4px;
+}
+.closeButton
+{
+    background: url('../Images/iconClose.png') 0 0px;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.closeButton:hover
+{
+    background: url('../Images/iconClose.png') 0 -20px;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+#overlay {
+     visibility: hidden;
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     width: 100%;
+     height: 100%;
+     z-index: 1000;
+     background-image: url('../Images/modalBG.png');
+}
+.POCMetricBuilder
+{
+    background-image: url('../Images/POC_metricBuilder1.gif');
+    width: 815px;
+    height: 514px;
+    margin-left: 110px;
+}

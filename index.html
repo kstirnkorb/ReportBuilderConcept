@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Demo - Report Builder Concept</title>
+<link href="Styles/Main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="bodyContainer">
+
+    <form id="form1" runat="server">
+
+    <div id="overlay">
+        <div id="metricBuilderContainer" class="POCMetricBuilder">
+            <div id="btnMetricBuilderClose" class="closeButton" style="float: right; margin-right: 10px; margin-top: 10px;">&nbsp;</div>
+        </div>
+    </div>        
+        
+    <!--- Report Config --->    
+        
+    <div style="width: 1020px; padding-left: 15px;">
+        <div class="sectionHeader" style="margin-left: -15px;">REPORT BUILDER</div>
+        <div style="width: 280px; float: left;">
+            <div class="stdLabel">Report Type</div>
+            <select class="ddlLabel" style="width:280px; height:20px;">
+              	<option value="reportID_1">100 Day 2.0</option>
+                <option value="reportID_2">Analytics IO Tracking</option>
+                <option value="reportID_3">Audience Composition</option>
+                <option value="reportID_4">Audience Performance</option>
+                <option value="reportID_5">Camp Budget Impressions</option>
+                <option value="reportID_6">Campaign</option>
+                <option value="reportID_7">Cross Partner</option>
+                <option value="reportID_8">Gross Media Spend</option>
+                <option value="reportID_9">Impression Totals</option>
+                <option value="reportID_10">Inventory Availability</option>
+                <option value="reportID_11">IO Daily Spend</option>
+                <option value="reportID_12">Keyword</option>
+                <option value="reportID_13">Page Category</option>
+                <option value="reportID_14">Partnerships Client</option>
+                <option value="reportID_15">Performance Cap Total</option>
+                <option value="reportID_16">Performance Conversion</option>
+                <option value="reportID_17">Planning Publisher</option>
+                <option value="reportID_18">Platform All Clients</option>
+            </select>
+        </div>
+        <div style="width: 260px; float: left; margin-left: 20px;">
+            <div class="stdLabel">Time Frame</div>
+            <select class="ddlLabel" style="width:280px; height:20px;">
+                <option value="timeFrameID_1">Custom Dates</option>
+                <option value="">----------------------------------------------------</option>
+                <option value="timeFrameID_2">Previous Day</option>
+                <option value="timeFrameID_3">Week To Date</option>
+                <option value="timeFrameID_4">Month To Date</option>
+                <option value="timeFrameID_5">Quarter To Date</option>
+                <option value="timeFrameID_6">Year To Date</option>
+                <option value="">----------------------------------------------------</option>
+                <option value="timeFrameID_7">Previous Week</option>
+                <option value="timeFrameID_8">Previous Month</option>
+                <option value="timeFrameID_9">Previous Quarter</option>
+                <option value="timeFrameID_10">Previous Year</option>
+                <option value="">----------------------------------------------------</option>
+                <option value="timeFrameID_11">Last 7 Days</option>
+                <option value="timeFrameID_12">Last 14 Days</option>
+                <option value="timeFrameID_13">Last 21 Days</option>
+                <option value="timeFrameID_14">Last 30 Days</option>
+            </select>
+        </div>      
+    </div>
+    
+    <div style="clear: both; float: left; width: 1020px; border-bottom: 1px solid #CCCCCC; margin-bottom: 25px; margin-top: 10px;">
+        &nbsp;
+    </div>
+    
+    <!--- Dimensions Config --->
+    
+    <div style="width: 1020px; padding-left: 15px; clear: both;">
+        <div id="secStateDimensions" class="stdLabel collpaseExpandIcon">[+/-]</div>
+        <div style="width: 280px; float: left;">
+            <div class="stdLabel">Dimensions</div>
+            <div id="sectionLeftDimensions" style="width: 280px; height: 300px; border: 1px solid #CCCCCC; float: left;"></div>
+        </div>    
+        <div id="sectionRightDimensions" style="width: 720px; height: 290px; float: left; margin-left: 15px;">
+            <div class="stdLabel">Search/Add Dimensions</div>
+            <div style="width: 720px;">
+                <img src="Images/iconSearch.png" width="22" height="20" alt="" title="" style="float: left;"/>
+                <input id="Text1" type="text" value="Search criteria..." class="inpCopy" style="width: 260px; float: left; margin-left: -1px; margin-right: -1px;"/>
+                <img src="Images/iconDeleteEnclosed_off.png" width="22" height="20" alt="" title=""/>
+            </div>
+            <div style="width: 720px; margin-top: 10px;">
+                <div id="containerDimensions" style="width: 720px; float: left; position: absolute;">
+                	<div class="cblLabelColumn1">
+                		<div class="cblLabel2"><input type="checkbox" value="dimensionID_5">Dimension 5</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_6">Dimension 6</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_7">Dimension 7</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_8">Dimension 8</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_9">Dimension 9</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_10">Dimension 10</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_11">Dimension 11</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_12">Dimension 12</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_13">Dimension 13</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_14">Dimension 14</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_15">Dimension 15</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_16">Dimension 16</div>
+                    </div>
+                    <div class="cblLabelColumn1">
+                		<div class="cblLabel2"><input type="checkbox" value="dimensionID_17">Dimension 17</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_18">Dimension 18</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_19">Dimension 19</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_20">Dimension 20</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_21">Dimension 21</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_22">Dimension 22</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_23">Dimension 23</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_24">Dimension 24</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_25">Dimension 25</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_26">Dimension 26</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_27">Dimension 27</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_28">Dimension 28</div>
+                    </div>
+                    <div class="cblLabelColumn1">
+                		<div class="cblLabel2"><input type="checkbox" value="dimensionID_29">Dimension 29</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_30">Dimension 30</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_31">Dimension 31</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_32">Dimension 32</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_33">Dimension 33</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_34">Dimension 34</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_35">Dimension 35</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_36">Dimension 36</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_37">Dimension 37</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_38">Dimension 38</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_39">Dimension 39</div>
+                        <div class="cblLabel2"><input type="checkbox" value="dimensionID_40">Dimension 40</div>
+                    </div>
+                </div>
+                <div id="dividerDimensions" style="width: 23px; height: 281px; float: left; position: relative; left: 210px;">
+                    <div id="imageDimensions" class="dividerCollapsed">
+                        &nbsp;  
+                    </div>
+                </div>
+                <div id="maskDimensions" style="width: 590px; height:281px; float: left; position: relative; left: 210px;  background:url('Images/availableItemsBG.png') repeat-x left top;">&nbsp;</div>     
+            </div>        
+        </div>
+    </div>
+    
+    <div style="clear: both; float: left; width: 1020px; border-bottom: 1px solid #CCCCCC; margin-bottom: 25px; margin-top: 10px;">
+        &nbsp;
+    </div>
+    
+    <!--- Dimension Filters Config --->
+    
+    <div style="width: 1020px; padding-left: 15px; clear: both;">
+        <div class="sectionLabel">Dimension Filters</div>
+        <div style="width: 1005px;">
+            <img src="Images/iconDelete_off.png" width="20" height="20" alt="" title="" style="float: left;"/>
+            <img src="Images/iconEdit.png" width="20" height="20" alt="" title="" style="float: left;"/>
+            <input id="inpDimFilter1" type="text" value='Dimension 20 IS LIKE "ABC Company" OR IS NOT LIKE "XYZ Company" AND BEGINS WITH "Best"' class="inpCopy" style="width: 915px; margin-bottom: 10px; float: left;"/>
+            <img src="Images/iconAnd.png" width="30" height="18" alt="" title="" style="float: left; margin-left: 5px;"/>
+            <img src="Images/iconDelete_off.png" width="20" height="20" alt="" title="" style="float: left; clear: both;"/>
+            <img src="Images/iconEdit.png" width="20" height="20" alt="" title="" style="float: left;"/>
+            <input id="inpDimFilter2" type="text" value='Dimension 6 IS LIKE "Campaign 2012 Winter"' class="inpCopy" style="width: 915px; margin-bottom: 10px; float: left;"/>
+            <img src="Images/iconOr.png" width="30" height="18" alt="" title="" style="float: left; margin-left: 5px;"/>
+            <img src="Images/iconDelete_off.png" width="20" height="20" alt="" title="" style="float: left; clear: both;"/>
+            <img src="Images/iconEdit.png" width="20" height="20" alt="" title="" style="float: left;"/>
+            <input id="inpDimFilter3" type="text" value='Dimension 5 BEGINS WITH "Wonderland"' class="inpCopy" style="width: 950px; float: left;"/>    
+        </div>
+    </div>
+    
+    <div style="clear: both; float: left; width: 1020px; border-bottom: 1px solid #CCCCCC; margin-bottom: 25px; margin-top: 10px;">
+        &nbsp;
+    </div>    
+    
+    <!--- Metrics Config --->
+    
+    <div style="width: 1020px; padding-left: 15px; clear: both;">
+        <div id="secStateMetrics" class="stdLabel collpaseExpandIcon">[+/-]</div>
+        <div style="width: 280px; float: left;">
+            <div class="stdLabel">Metrics</div>
+            <div id="sectionLeftMetrics" style="width: 280px; height: 300px; border: 1px solid #CCCCCC; float: left;"></div>
+        </div>    
+        <div id="sectionRightMetrics" style="width: 720px; height: 290px; float: left; margin-left: 15px;">
+            <div class="stdLabel">Search/Add Metrics</div>
+            <div style="width: 720px;">
+                <img src="Images/iconSearch.png" width="22" height="20" alt="" title="" style="float: left;"/>
+                <input id="Text2" type="text" value="Search criteria..." class="inpCopy" style="width: 260px; float: left; margin-left: -1px; margin-right: -1px;"/>
+                <img src="Images/iconDeleteEnclosed_off.png" width="22" height="20" alt="" title="" style="float: left;"/>
+                <img src="Images/iconMetricBuilderPlaceholder.png" width="31" height="31" alt="" title="" class="metricBuilderButton" id="imgMetricBuilder"/>
+            </div>
+            <div style="width: 720px; margin-top: 10px;">
+                <div id="containerMetrics" style=" width: 720px; float: left; position: absolute;">
+                	<div class="cblLabelColumn1">
+                		<div class="cblLabel2"><input type="checkbox" value="metricID_5">Metric 5</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_6">Metric 6</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_7">Metric 7</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_8">Metric 8</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_9">Metric 9</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_10">Metric 10</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_11">Metric 11</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_12">Metric 12</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_13">Metric 13</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_14">Metric 14</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_15">Metric 15</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_16">Metric 16</div>
+                    </div>
+                    <div class="cblLabelColumn1">
+                		<div class="cblLabel2"><input type="checkbox" value="metricID_17">Metric 17</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_18">Metric 18</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_19">Metric 19</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_20">Metric 20</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_21">Metric 21</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_22">Metric 22</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_23">Metric 23</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_24">Metric 24</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_25">Metric 25</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_26">Metric 26</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_27">Metric 27</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_28">Metric 28</div>
+                    </div>
+                    <div class="cblLabelColumn1">
+                		<div class="cblLabel2"><input type="checkbox" value="metricID_29">Metric 29</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_30">Metric 30</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_31">Metric 31</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_32">Metric 32</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_33">Metric 33</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_34">Metric 34</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_35">Metric 35</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_36">Metric 36</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_37">Metric 37</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_38">Metric 38</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_39">Metric 39</div>
+                        <div class="cblLabel2"><input type="checkbox" value="metricID_40">Metric 40</div>
+                    </div>
+                </div>
+                <div id="dividerMetrics" style="width: 23px; height: 281px; float: left; position: relative; left: 210px;">
+                    <div id="imageMetrics" class="dividerCollapsed">
+                        &nbsp;  
+                    </div>
+                </div>
+                <div id="maskMetrics" style="width: 590px; height:281px; float: left; position: relative; left: 210px;  background:url('Images/availableItemsBG.png') repeat-x left top;">&nbsp;</div>
+            </div>        
+        </div>        
+    </div>
+    
+
+    <div style="clear: both; float: left; width: 1020px; border-bottom: 1px solid #CCCCCC; margin-bottom: 25px; margin-top: 10px;">
+        &nbsp;
+    </div>
+    
+    <!--- Metric Filters Config --->
+    
+    <div style="width: 1020px; padding-left: 15px; clear: both;">
+        <div class="sectionLabel">Metric Filters</div>
+        <div style="width: 1005px;">
+            <img src="Images/iconDelete_off.png" width="20" height="20" alt="" title="" style="float: left;"/>
+            <img src="Images/iconEdit.png" width="20" height="20" alt="" title="" style="float: left;"/>
+            <input id="inpMetricFilter1" type="text" value='Metric 22 FOR Previous Month > 1000' class="inpCopy" style="width: 915px; margin-bottom: 10px; float: left;"/>
+            <img src="Images/iconAnd.png" width="30" height="18" alt="" title="" style="float: left; margin-left: 5px;"/>
+            <img src="Images/iconDelete_off.png" width="20" height="20" alt="" title="" style="float: left; clear: both;"/>
+            <img src="Images/iconEdit.png" width="20" height="20" alt="" title="" style="float: left;"/>
+            <input id="inpMetricFilter2" type="text" value='Metric 12 FOR Last 30 Days IS BETWEEN 0.95 AND 0.99' class="inpCopy" style="width: 915px; margin-bottom: 10px; float: left;"/>
+            <img src="Images/iconAnd.png" width="30" height="18" alt="" title="" style="float: left; margin-left: 5px;"/>
+            <img src="Images/iconDelete_off.png" width="20" height="20" alt="" title="" style="float: left; clear: both;"/>
+            <img src="Images/iconEdit.png" width="20" height="20" alt="" title="" style="float: left;"/>
+            <input id="inpMetrciFilter3" type="text" value='Metric 6 IS GREATER THAN Metric 8 BY 5%' class="inpCopy" style="width: 950px; float: left;"/>    
+        </div>
+    </div>
+    
+    <div style="clear: both; float: left; width: 1020px; border-bottom: 1px solid #CCCCCC; margin-bottom: 25px; margin-top: 10px;">
+        &nbsp;
+    </div>        
+    
+    <!--- Schedule Config --->
+    
+    <div style="width: 1020px; padding-left: 15px; clear: both;">
+        <div id="secStateSchedule" class="stdLabel collpaseExpandIcon">[+/-]</div>
+        <div style="width: 280px; float: left;">
+            <div class="stdLabel">Schedule/Alert</div>
+            <div id="sectionLeftSchedule" style="width: 280px; height: 300px; border: 1px solid #CCCCCC; float: left;"></div>
+        </div>  
+        <div id="sectionRightSchedule" style="width: 720px; height: 290px; float: left; margin-left: 15px;">
+            <div class="stdLabel">Add Recipient Email</div>
+            <div style="width: 720px;">
+                <input id="Text3" type="text" value="Enter a valid email address here..." class="inpCopy" style="width: 260px;"/>
+            </div>
+        </div>        
+    </div>
+    
+    <div style="clear: both; float: left; width: 1020px; border-bottom: 1px solid #CCCCCC; margin-bottom: 25px; margin-top: 10px;">
+        &nbsp;
+    </div>
+    
+    <!--- Sharing Config --->
+    
+    <div style="width: 1020px; padding-left: 15px; clear: both;">
+        <div id="secStateSharing" class="stdLabel collpaseExpandIcon">[+/-]</div>
+        <div style="width: 280px; float: left;">
+            <div class="stdLabel">Sharing</div>
+            <div id="sectionLeftSharing" style="width: 280px; height: 300px; border: 1px solid #CCCCCC; float: left;"></div>
+        </div> 
+        <div id="sectionRightSharing" style="width: 720px; height: 290px; float: left; margin-left: 15px;">
+            <div class="stdLabel" style="float: left;">Search/Add Recipient Emails</div>
+            <div class="stdLabel" style="margin-left: 320px;">Add Recipient Emails</div>
+            <div style="width: 720px;">
+                <img src="Images/iconSearch.png" width="22" height="20" alt="" title="" style="float: left;"/>
+                <input id="Text4" type="text" value="Search criteria..." class="inpCopy" style="width: 260px; float: left; margin-left: -1px;"/>
+                <img src="Images/iconDeleteEnclosed_off.png" width="22" height="20" alt="" title="" style="float: left; margin-left: -1px;"/>
+                &nbsp;&nbsp;
+                <input id="Text5" type="text" value="Enter a valid email address here..." class="inpCopy" style="width: 260px;"/>
+            </div>
+            <div style="width: 720px; margin-top: 10px;">
+                <div class="cblLabelColumn1">
+                    <div class="cblLabel2"><input type="checkbox" value="sharingID_5">Recipient1@ABCCompany.com</div>
+                    <div class="cblLabel2"><input type="checkbox" value="sharingID_6">Recipient2@ABCCompany.com</div>
+                    <div class="cblLabel2"><input type="checkbox" value="sharingID_7">Recipient3@ABCCompany.com7</div>
+                    <div class="cblLabel2"><input type="checkbox" value="sharingID_8">Recipient4@ABCCompany.com</div>
+                    <div class="cblLabel2"><input type="checkbox" value="sharingID_9">Recipient5@ABCCompany.co9</div>
+                    <div class="cblLabel2"><input type="checkbox" value="sharingID_10">Recipient1@XYZCompany.com</div>
+                    <div class="cblLabel2"><input type="checkbox" value="sharingID_11">Recipient2@XYZCompany.com</div>
+                    <div class="cblLabel2"><input type="checkbox" value="sharingID_12">Recipient1@AtlasAgency.com</div>
+                    <div class="cblLabel2"><input type="checkbox" value="sharingID_13">Recipient2@AtlasAgency.com</div>
+                    <div class="cblLabel2"><input type="checkbox" value="sharingID_14">Recipient1@TheBestAgencyEver.com</div>
+                    <div class="cblLabel2"><input type="checkbox" value="sharingID_15">Recipient2@TheBestAgencyEver.com</div>
+                </div>
+            </div>               
+        </div>        
+    </div>
+    
+    <div style="clear: both; float: left; width: 1020px; border-bottom: 1px solid #CCCCCC; margin-bottom: 25px; margin-top: 10px;">
+        &nbsp;
+    </div>
+    
+    <!--- Report Name --->
+    
+    <div style="width: 1020px; padding-left: 15px; clear: both;">
+        <div style="width: 1020px; float: left;">
+            <div class="stdLabel">Report Name</div>
+            <input id="Text6" type="text" value="Audience Performance Custom Report" class="inpCopy" style="width: 400px;"/>           
+        </div>
+        <div style="width: 1005px; float: left; text-align: right;">
+            <input id="Button1" type="button" value="SAVE" class="btnLabel" />
+            <input id="Button2" type="button" value="SUBMIT" class="btnLabel" />
+            <input id="Button3" type="button" value="CANCEL" class="btnLabel" />
+        </div>                       
+    </div> 
+    
+    <div style="clear: both; float: left; width: 1020px; border-bottom: 1px solid #CCCCCC; margin-bottom: 25px; margin-top: 10px;">
+        &nbsp;
+    </div>  
+    
+    <div style="clear: both; float: left; width: 1020px;">
+        &nbsp;
+    </div>                
+    
+    </form>
+    
+    <script type="text/javascript" src="Scripts/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="Scripts/ReportBuilder.js"></script>  
+
+</body>
+</html>
